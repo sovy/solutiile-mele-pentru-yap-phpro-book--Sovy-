@@ -1,0 +1,22 @@
+1. are semantica de http method in contextul semantic al request 
+line-ului din HTTP request, din cadrul unei comunicatii in limbaj HTTP
+dintre un client si deamonul HTTP.
+2. are semantica de includere de fisiere de configurare, in contextul semantic 
+al incarcarii instructiunilor de configurare a daemoului apache din fisierul
+httpd.conf
+3. comunicarea in limbajul HTTP are loc in contextul semantic HTTP
+request si HTTP response dintre un client si un daemon HTTP.
+4. are semantica de table data in contextul semantic al unei linii de tabel
+<tr> din cadrul unui tabel <table> din response body-ul unui http response
+cu content-type:text/html.
+5. are semantica de table row in contextul semantic al unui tabel <table> 
+din response body-ul unui http response cu content-type:text/html .
+6. <body> are semnificatia de informatie ce urmeaza a fi afisata in canvasul 
+browserului in contextul semantic al response body-ului unui http response
+cu content-type:text/html.
+7.<html> are semnificatia urmeaza informatie structurata semantic HTML in 
+contextul semantic MIME:text/html.
+8.href - are semantica de link catre o anumita resursa in contextul semantic
+al unui tag HTML ce accepta acest atribut.
+  
+

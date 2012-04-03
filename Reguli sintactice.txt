@@ -1,0 +1,17 @@
+ Fie regula sintactica
+[A] A [A A] [A [A <B>]] <C>
+		Partea I
+ Care din urmatoarele imputuri o respecta?
+1. AABC 
+2. AAAAC
+3. AC
+4. AAAC
+5. AAABC
+
+R: 2, 3, 4, 5
+
+		Partea II
+ Detaseaza-te de aceasta regula sintactica abstracta, si fa 
+o afirmatie pragmatica despre B. Afirmatia incepe asa: B este mereu...
+
+ Intr-un input valid B este mereu precedat de cel putin trei de A.

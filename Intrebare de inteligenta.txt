@@ -1,0 +1,6 @@
+ De ce codul anterior nu are in ramura else de pe linia 13 inca un if/else
+in interior pentru cazul in care vizitatorul este si administrator?
+
+R: Pentru ca un administrator este de fapt un utilizator cu drepturi speciale
+(sporite). Odata ce nu reusesti sa te autentifici ca un simplu utilizator 
+atunci nu are rost sa fii verificat suplimentar daca esti administrator sau nu.

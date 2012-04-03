@@ -1,0 +1,97 @@
+		Rezumat capitol 2
+  Chiar de la inceputul capitolului s-a pus un mare accent pe
+semantica si contextul semantic. Prin semantica unui lucru, 
+obiect, actiune, ..etc, se intelege sensul care  il capata 
+acel lucru, obiect, actiune  ..etc intr-un anumit context. 
+Ex: cuvantul - Include. Folosit in contextul unei propozitii
+matematice "multimea A include multimea B" are sens de operatie
+matematica pe cand folosit in contextul fisierului de configurare
+a lui apache are sens de includere de fisiere de configurare.
+  Un alt lucru de baza pe care trebuie sa il stim despre un limbaj
+de programare este ca fiecare respecta o anumita sintaxa. Toate 
+constructele si toate expresiile trebuie sa respecte anumite 
+reguli sintactice pentru a avea semantica, gandita de inventatorul
+limbajului de programare. Ex: constructul Include pentru a avea semantica 
+de includere de fisiere de configurare trebuie sa fie separat cu un  
+spatiu de calea catre acele fisiere.
+   Pana la sfarsitul acestui capitol am facut cunostinta cu urmatoarele
+tipuri de date:
+-binar;
+-integer;
+-float;
+-string;
+-boolean;
+-array;
+ Tipul de date binar este reprezentat de scrierea datelor sub forma de 
+siruri de 0 si 1.
+ Tipul de date integer este reprezentat de totalitatea numerelor intregi.
+ Tipul de date float este reprezentat de totalitatea numerelor cu virgula.
+ Tipul de date boolean este reprezentat de doua valori TRUE si FALSE.
+ Tipul de date array este un tip de date compozit. Facem aceasta afiramatie
+deoarece in interiorul unui array putem avea toate celelalte tipuri de 
+date, prezentate mai sus, precum si alte array-uri, care la randul lor 
+pot contine ca elemente alte array-uri.
+  O notiune elemntara a limbajului PHP este ce de "expresie". PHP intelege 
+o expresie ca fiind o entitate care are o valoare.
+Bineinteles valorile pot fi constante sau variabile. Spunem ca o expresie
+are o valoare constanta atunci cand valoarea acesteia nu se modifica si 
+valoare variabila in caz contrar. 
+  In PHP putem lucra cu doua tipuri de constante: predefinite(PHP le creeaza
+automat pentru noi) si definite(create de noi).
+  Variabilele au 3 caracteristici:
+-identificator sau nume-- este precedat de $, iar urmatorul caracter de dupa
+el trebuie sa fie neaparat _ sau o litera;
+-valoare;
+-tip de date.
+  Cu fiecare tip de date in parte putem face operatii folosind 
+diferiti operatori specifici: 
+-pentru integer si float avem: +.-,*,/, %;
+-pentru string: concatenarea, <<<;
+-pentru boolean: &&, ||, !, and, xor,or; 
+-pentru binar: &, |, ~, ^, >>, <<.
+  Atunci cand folosim operatorii trebuie sa tinem cont de precedenta lor
+(adica ce operator are prioritate fata de ceilalti in cadrul evaluarii 
+valorii unei expresii), precum si de asociativitatea lor(in functie de 
+asocitivitate unui operator parserul evalueaza mai intai expresia din 
+stanga sau din  dreapta). 
+  Daca din diverse motive folosim unele tipuri de date ca operanzi in 
+contextul semantic al unor operatii corespunzatoare altor tipuri de 
+date PHP va face automat convertirea de la un tip de date in altul
+(adica la tipul de date corespunzator acelei operatii).
+Din aceasta cauza putem spune ca PHP este dinamically typed.
+  Faptul ca instructiunile sunt executate la rand una dupa alta
+ne face sa spunem ca executia scriptului este liniara. Fluxul de 
+executie este reprezentat de locurile prin care trece parserul php
+pentru a executa fiecare instructiune. Pentru bifurcarea fluxului 
+de executie s-au creat constructele if si switch.Fluxul de executie
+se bifurca in functie de cum este evaluata valoarea expresiei  din 
+cadrul conditiei constructelor if sau switch.
+  Pentru evitarea scrierii de portiuni de cod repetitiv(care respecta
+acelasi algoritm) se folosesc constructele while, do while si for.
+Rolul lor este ca parserul sa  execute instructiunile din cadrul 
+celor doua constructe atata timp cat conditia este evaluta ca TRUE.
+Pentru a intrerupe executia buclelor putem folosi break, iar daca 
+vrem sa facem ca parserul sa sara peste executia unor instructiuni,
+din cadrul buclei, putem folosi "continue".
+  Dupa cum am spus mai sus array-urile sunt putin mai deosebite 
+decat celelalte tipuri de date deoarece ele nu se limiteaza la 
+un singur tip de date, pot contine valori ale tuturor tipurilor
+de date, inclusiv alte array-uri(un array e la randul lui o 
+valoare). Fiecare valoare din cadrul array-ului are o anumita 
+pozitie in cadrul array-ului, ea fiind identificata 
+de indexul/cheia valorii respective. Cheile respective pot
+fi precizate exeplicit sau nu. In situatia in care nu sunt 
+precizate explicit ele sunt puse automat de php ca numere 
+in ordine crescatoare.Aceste arrayuri se mai numesc liste 
+sau vectori. In situatia in care cheile sunt precizate explicit,
+array-urile se numesc asociative sau dictionare.De precizat
+ca cheile nu pot fi arrayuri.
+  Pentru separarea muncii adica cea de programator de cea de 
+designer aplicatiile au fost impartite in doua parti:
+- o parte care tine de algoritmica si de logica aplicatiei
+denumita Business logic;
+- o parte pentru a afisa rezultate generate de prima parte
+denumita View Logic.
+ 
+ 
+ 

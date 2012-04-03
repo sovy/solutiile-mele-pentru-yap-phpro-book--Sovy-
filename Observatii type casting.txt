@@ -1,0 +1,28 @@
+ Convertirea din:
+1) NULL in :
+	a) int => valoarea constanta de tip integer 0
+	b) string => valoarea constanta de tip string ""
+	c) bool => ---II--II---------------bool FALSE
+	d) array => array()
+2)"" in :
+	a) int => 0
+	b) bool => FALSE
+	c) array((string)"")
+3)int in:
+	a) string => valoarea constanta de tip string 'number'
+	b) bool => daca int are o valoare != 0 atunci e TRUE
+	c) array => array((int) number)
+4)string in:
+	a) int -daca stringul incepe cu un numar e valoarea constanta
+de tip int a numarului respectiv
+	       -daca stringul incepe cu un caracter => 0
+	b) bool-daca stringul e diferit de "" sau "0" => TRUE
+	c) array => array((string)"string")
+5) array in:
+	a) int - daca array-ul are cel putin un element => 1 altfel
+e 0
+	b) string => stringul array
+	c) bool => daca array-ul are cel putin un element => TRUE
+
+	Se observa ca toate valorile care sunt diferite de stringurile "" 
+si "0", NULL, integerul 0, array() sunt evaluate ca TRUE.

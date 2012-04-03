@@ -1,0 +1,8 @@
+	Explica in limba romana, pe baza definitiei operatiei xor,
+in ce situatii este foarte utila aceasta operatie.
+- pentru verificarea daca doi biti sunt diferiti;
+-pentru criptare - criptarea si decriptarea se face foarte usor
+folosind xor, unul din operanzi fiind cheia;
+-pentru crearea informatiilor de paritate RAID;
+-pentru inversarea bitilor de pe anumite pozitii.
+

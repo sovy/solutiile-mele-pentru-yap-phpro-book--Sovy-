@@ -1,0 +1,7 @@
+ De ce face parte si verificarea unei conditii din executia liniara de dianinte
+si de dupa daca?
+R: Parserul executa liniar scriptul instructiune cu instructiune, iar in 
+momentul cand ajunge la 'daca' parserul va fi pus in contextul semantic
+de a se astepta sa urmeze o expresie conditionala pe care va trebui sa o 
+evalueze ca TRUE or FALSE. Fluxul de executie va fi bifurcat in functie 
+de valoarea de adevar a expresiei conditionale evaluate.    

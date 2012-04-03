@@ -1,0 +1,172 @@
+1. Retelistica
+1.1 Noduri, TCP/IP, retele 
+- network nodes - routers, switches, PCs.., etc
+-TCP/IP -transport control protocol/internet protocol
+-traceroute, tracert, ping, telnet.
+
+1.2 Domenii 
+-DNS -Domain name system
+-nslookup
+
+1.3 Protocoale 
+-http- hyper text transport protocol
+-http request
+-FTP - file transport protocol
+
+1.3.1 Primul exercitiu de hacking 
+-hacker
+-cracker
+
+1.4 Instalarea mediului de dezvoltare 
+- daemon apache - httpd
+- environment variable
+
+2 Controlul fluxului de executie si de date
+2.1 O altfel de reîmprospatare 
+-semantics
+-semantic context 
+
+2.2 Output simplu 
+- echo
+- HTTP response body
+
+2.3 Folosirea variabilelor 
+-$a 
+	-identificator;
+	-name;
+	-value;
+
+2.3.1 Variabile si tipuri de date elementare 
+-binary
+-integer
+-float
+
+2.3.2 Operatii cu string, int, float 
+. concatenate two strings
+operators precedence
+operators associativity
+ 
+2.3.3 Operatii matematice 
++ sum = arithmetic operator
+* product
+= assignement operator
+
+2.4 Algoritmi si scheme logice \
+executie liniara - linear execution
+fluxul de executie -execution flow
+flowchart
+
+2.5 Tipul de date boolean
+TRUE 
+FALSE
+
+2.5.1 Conjunctii, disjunctii si negatii 
+&& - logical and 
+|| - logical or
+ ! - logical not
+legile lui De Morgan - De Morgan laws
+conjunction between 2 expressions is TRUE only if the 2 expressions
+ are TRUE.
+disjunction between 2 expressions is FALSE only if the 2 expressions 
+are FALSE.
+
+2.6 Conditii – if si switch 
+bifurca fluxul de executie - fork the execution flow
+=== - strict comparison
+
+2.7 Buclele while si do while
+- when we want to avoid writing code for the same pattern repeated
+
+2.7.1 break si continue 
+break the loop
+continue -the parser will skip executon of the rest of instructions 
+from loop when it see this construct.
+
+2.8 Tipul de date array. Bucla foreach 
+-key => value
+-associative arrays;
+-indexed arrays;
+
+2.9 Bucla for 
+do the same thing like while but initialization of $i
+isn't done before the loop
+
+2.10 Completari 
+2.10.1 Stringuri 
+esacape 
+\ - backslash
+new line  \n
+nowdoc - for delimit simple strings
+heredoc - for delimit interpolate string
+
+2.10.2 Constante si alte tipuri de date 
+__FILE__ -current file
+__LINE__ -current line
+PHP_INT_MAX- maximum value of an integer
+PHP_INT_SIZE - number of bytes that can represent an integer
+PHP_EOL - end of line
+typecasting - implicit conversion and explicit conversion
+
+2.10.3 Alti operatori 
+++ increment 
+-- decrement 
+
+2.10.4 Sfaturi de stil 
+it's ok to compare CONSTANT == $var and not OK, in reverse order
+
+2.10.5 Breaking down the logic 
+when we want to analize all the situations of a disjunction or conjunction
+
+2.10.6 Coding convention 
+$a = array {
+	array{},
+	'a',
+	$b * $c,
+	2,
+}
+set of rules to format the code
+
+2.11 Input si formulare 
+$_GET -
+$_POST -
+are two arrays and all of their elements are strings
+isset - with this construct we can verify if a variable is set and isn't NULL
+
+2.11.1 Formulare, business logic si view logic 
+BL - part of the script that process input
+VL - generates  the output based on atomic informations of the aplication
+
+2.12 Array-uri multidimensionale
+the arrays could contain mixed data types --inncluding other arrays
+$a = array {
+	2,
+	FALSE,
+	array($b, $c),
+	array($d, $e, $f)
+}
+2.12.1 Geometria si normalizarea array-urilor
+to bring the array at canonical form -- the most complex form of it
+
+2.13 Sisteme de numeratie
+2.13.1 Baze numerice 
+binary numeration system 
+octal numeration system
+decimal numeration system
+hexadecimal numeration system
+
+2.13.2 Operatii pe biti 
+>> - binary right shift 
+<< - binary left shift
+& - and
+| - or
+^ - xor
+~ - not
+
+2.14 Variabile variabile 
+$foo = 'red'
+$$foo = $red
+
+2.15 Referinte
+$a = 2;
+&$b = $a;
+both variables point to the same value in the variable global scope 

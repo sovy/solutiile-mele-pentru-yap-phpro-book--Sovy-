@@ -1,0 +1,27 @@
+ Care sunt greselile algoritmice din pseudocodul urmator?
+
+daca parola este corecta 
+	afiseaza 'autentificat'
+altfel
+	afiseaza 'parola este gresita'
+afiseaza 'aceasta este o informatie secreta'
+afiseaza 'vizibila doar utlizatorilor autentificati'
+
+R: Cele doua instructiuni de la sfarsit nu sunt puse corect deoarece
+acele doua mesaje trebuie sa fie vizibile doar utlizatorilor 
+autentificati,iar in modul cum sunt ele pozitionate acum ele vor fi
+vizibile pentru toti utilizatorii(autentificati sau nu).
+  Acest algoritm ar trebui verifice daca parola introdusa de un utilizator
+apartine unui utilizator autorizat sau nu. In situatia in care dupa 
+verificarea parolei se constata ca utilizatorul este autorizat atunci 
+acestuia trebuie sa i se puna la dispozitie toate informatiile la care 
+are acces. In situatia cand utilizatorul a introdus o parola invalida 
+atunci acesta nu trebuie sa vada nici o informatie la care au acces
+utilizatorii autentificati. 
+
+daca parola este corecta
+	afiseaza 'autentificat'
+	afiseaza 'aceasta este o informatie secreta'
+	afiseaza 'vizibila doar utlizatorilor autentificati'
+altfel
+	afiseaza 'parola este gresita' 

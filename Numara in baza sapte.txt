@@ -1,0 +1,26 @@
+ Numara pana la cantitatea doua zeci in baza sapte folosind setul de simboluri
+ordonate d, g, h, a, s, z, u.
+d
+g
+h
+a
+s
+z
+u
+gd
+gg
+gh
+ga
+gs
+gz
+gu
+hd
+hg
+hh
+ha
+hs
+hz
+hu
+ad
+
+
