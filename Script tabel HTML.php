@@ -1,55 +1,67 @@
 <?php
 /**
  * The script will display in a table preferences of some children.
- * For this I create a bidimensional array with indexed keys and 
- * values are associative arrays with their preferences.  
+ * $data_store - is an array who maps the children's names with 
+ * their preferences and the values of these preferences.
+ * 
+ * display a table with predefinite headers and alternately colored
+ * rows 
+ *  
+ *   
+ *
+ * string table_display(array $a, array $table_headers)  
  */
-$message = NULL;
-$name = array('George', 'Costel', 'Florin');
-$hobby = array('chess', 'reading', 'movies');
-$sport = array('football', 'basketball', 'tennis');
-$color = array('red', 'blue', 'black');
-$vegetable = array('tomato', 'potato', 'salad');
+
+function table_display($a, $table_headers) {
+	$i = 0;
+	$display = '<table border = "1"><tr>';
+	foreach($table_headers as $values) {
+		$display .= '<th>' . $values . '</th>'; 
+	}
+	$display .= '</tr>'; 
+	foreach($a as $key => $preferences) {
+		$i++;
+		if($i % 2) {
+			$display .= '<tr style="background-color:blue">';
+		}
+		else {
+			$display .= '<tr style="background-color:yellow">';
+		}
+		$display .= '<td>' . $key .  '</td>';
+		foreach($preferences as $name_pref => $value) {
+			$display .='<td>' . $value . '</td>';
+		}
+		$display .= '</tr>';
+		 
+	}
+	$display .= '</table>';
+	return $display;
+}
+
+$data_store = array( 
+	'George' => array(
+		'hobby' => 'chess',
+		'sport' => 'football',
+		'color' => 'red',
+		'vegetable' => 'tomato',
+	 ),
+	'Costel' => array(
+		'hobby' => 'reading',
+		'sport' => 'basketball',
+		'color' => 'black',
+		'vegetable' => 'potato',
+	 ),
+	'Florin' => array(
+		'hobby' => 'movies',
+		'sport' => 'tennis',
+		'color' => 'blue',
+		'vegetable' => 'salad',
+	), 
+);
 $meta = array('name', 'hobby', 'sport', 'color', 'vegetable');
 
-/*
-$persons = array(
-		array($name[0], $hobby[0], $sport[0], $color[0], $vegetable[0]),
-		array($name[1], $hobby[1], $sport[1], $color[1], $vegetable[1]),
-		array($name[2], $hobby[2], $sport[2], $color[2], $vegetable[2]),
-		array($name[3], $hobby[3], $sport[3], $color[3], $vegetable[3]),
-		array($name[4], $hobby[4], $sport[4], $color[4], $vegetable[4]),
 
-);
-*/
+echo table_display($data_store, $meta);
 
-for($j=0; $j<3; $j++) {
-	$persons[] = array($name[$j], $hobby[$j], $sport[$j], $color[$j], $vegetable[$j]);	
-}
 
-$i = 0;
-$message[] = '<table border = "1"><tr>';
-foreach($meta as $values) {
-	$message[] = '<th>' . $values . '</th>'; 
-}
-$message[] = '</tr>'; 
-foreach($persons as $key => $array_individual) {
-	$i++;
-	if($i % 2) {
-		$message[] = '<tr style="background-color:blue">';
-	}
-	else {
-		$message[] = '<tr style="background-color:yellow">';
-	}
-	foreach($array_individual as $individual_preferences) {
-		$message[] = '<td>' . $individual_preferences . 
-			'</td>';	
-	}
-	$message[] = '</tr>';	
-}
-$message[] = '</table>';
-
-foreach($message as $display_elements) {
-	echo $display_elements;
-}
 
