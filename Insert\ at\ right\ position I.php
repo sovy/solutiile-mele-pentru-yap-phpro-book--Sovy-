@@ -26,7 +26,6 @@ function insert_at_right_position($a, $b, $c) {
 $a = (int) $_GET['a'];
 $b = (int) $_GET['b'];
 $c = (int) $_GET['c'];
-$message = array();
 if($a <= $b) {
     list($a, $b, $c) = insert_at_right_position($a, $b, $c);
 }
