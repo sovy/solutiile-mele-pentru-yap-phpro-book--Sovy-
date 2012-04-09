@@ -30,7 +30,7 @@ if($a <= $b) {
     list($a, $b, $c) = insert_at_right_position($a, $b, $c);
 }
 else {
-    list($a, $b) = aray($b, $a);
+    list($a, $b) = array($b, $a);
     list($a, $b, $c) = insert_at_right_position($a, $b, $c);
 }
 
