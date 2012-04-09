@@ -1,0 +1,13 @@
+1. De ce nu are sens declararea unei variabile statice in scope-ul global?
+    Pentru ca o variabila statica este de fapt o variabila locala, deci se afla
+in local scope-ul functiei, dar care nu este stearsa in momentul cand se iese
+din acest local scope. Daca o declaram in scope-ul global atunci aceasta
+variabila statica isi pierde calitatea de variabila locala ceea ce rezulta ca
+functia va fi strans legata de aceasta variabila globala ce ce o face 
+nereutilizabila.
+
+2. Dincolo de faptul ca PHP nu ne lasa din punct de vedere sintactic, de ce nu
+are sens declararea unei variabile statice si globale in acelasi timp, in
+interiorul unei functii?
+    Pentru ca e deajuns sa fie declarata doar globala, aceasta variabila
+indeplineste toate intrebuintarile unei variabile statice.
