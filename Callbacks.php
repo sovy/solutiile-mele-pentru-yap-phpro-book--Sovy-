@@ -8,7 +8,7 @@
  */
 
 function my_cb($key) {
-    if(is_integer($key) && $key >0 && $key <=42) {
+    if(is_int($key) && $key >0 && $key <=42) {
         $m = TRUE;
     }
     else {
