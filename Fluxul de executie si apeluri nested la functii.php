@@ -1,4 +1,3 @@
- Fie codul:
 <?php
 function foo($a) {
 	return $a +1;
@@ -11,17 +10,25 @@ echo foo(bar(foo(foo (38))+2));
  Explica pe rand pe unde trece fluxul de executie si perechile de operatii
 de adunare si de inmultire care sunt executate.
 
- Prima oara este apelata functia foo avand valoarea parametrului 38, 
-valoarea returnata in urma acestui apel la functia foo este 39(38+1),
-dupa care functia foo este apelata din nou, dar de data aceasta valoarea 
-parametrului este retvalul functiei foo(adica 39) in urma apelului 
-de mai devreme a functiei foo, valoarea returnata de acest apel este 
-40(39+1), aceasta valoarea se aduna cu 2 rezultand valoarea 42, se 
-apeleaza functia bar, iar valoarea parametrului pasat acestei functii 
-are valoarea rezultata in urma adunarii de mai devreme
-adica 42, dupa care se apeleaza din nou functia foo avand valoarea
-parametrului, retvalul functiei bar(42*42), adica 1764. 
- Valoarea finala returnata este de 1765(1764+1). Aceasta valoare ii 
-este pasata lui echo pentru a fi afisata.
- 
+Fluxul de executie ajunge la linia 8. Aici parserul php trebuie sa evalueze 
+valoarea expresiei de dupa echo pentru a i-o pasa acestuia. 
+
+I. prima oara va fi apelata functia foo avand valoarea parametrului 38(fluxul 
+de executie sare la linia 2), valoarea returnata in urma acestui apel la 
+functia foo este 39(38+1);
+II. fluxul de executie revine la linia 8 unde retvalue-ul functiei
+foo de mai devreme este adunat cu 2 (39 + 2 = 41), dupa care
+functia foo va fi apelata din nou, dar de data aceasta valoarea 
+parametrului este 41; 
+III. deci fluxul de executie sare din nou la linia 2, retvalue-ul
+functiei foo va fi 41 + 1 = 42;
+IV. fluxul de executie revine la linia 8. Va fi apelata functia bar
+avand ca paramatru valoarea returnata de functia foo in urma apelului
+anterior.
+V. fluxul de executie sare la linia 5, retvalue-ul functiei bar va fi 
+ 42 * 42 = 1764;
+VI. fluxul de executie revine din nou la linia 8. Va fi apelata din nou 
+functia foo avand valoarea parametrului 1764;
+VII. fluxul de executie sare la linia 2, retavalue-ul functiei foo 
+este 1764 + 1 = 1765. Aceasta valoarea ii va fi pasata lui echo.
 
