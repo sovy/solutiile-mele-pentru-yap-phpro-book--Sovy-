@@ -3,7 +3,7 @@
  *
  * int array_product(mix $par[, mix $...]);
  *
- * This function returns the product of an array elements; 
+ * This function returns the product array elements; 
  * in case if the value passed as parameter is array() or at least one
  * array element isn't numeric , the retval will be 0;
  *
