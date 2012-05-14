@@ -20,7 +20,7 @@ function user_authentication($username, $input_pass, $file) {
         $c = preg_match($pattern, $content, $matches);
         fclose($handle);
         if(array() !== $matches) {
-             $input_pass = crypt($input_pass, '$1$' . md5(substr($input_pass, -1)));
+             $input_pass = crypt($input_pass, '$1$' . md5(substr($input_pass, -3)));
             return $input_pass === $matches[1] ? TRUE : FALSE;
         } 
         else {
@@ -53,7 +53,7 @@ function create_account($user, $pass, $file) {
             die('This user exists in the database!!!'); 
         }
         else {
-            $pass = crypt($pass, '$1$' . md5(substr($pass, -1)));
+            $pass = crypt($pass, '$1$' . md5(substr($pass, -3)));
             return fwrite($handle, $user . '='. $pass . ';') ? TRUE : FALSE;
         } 
         fclose($handle);   
